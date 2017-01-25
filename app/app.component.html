@@ -1,0 +1,19 @@
+<div id="wrapper">
+    <header id="header" class="header-fixed">
+        <div class="header-limiter">
+            <h1>{{pTitle}}</h1>
+            <nav>
+                <a [routerLink]="['/home']" class="">Home</a>
+                <a [routerLink]="['/post/add']" class="">Add Post</a>
+                <a [routerLink]="['/posts']" class="">Posts</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container container-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; GENERAL PUBLIC LICENSE. All rights reserved. Developed: <a href="http://github.com/sjshank" target="_blank">SJSHANK</a></p>
+    </footer>
+</div>

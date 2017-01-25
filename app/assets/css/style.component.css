@@ -1,0 +1,226 @@
+.container-wrapper {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+/**** HEADER CSS ****/
+
+.header-fixed {
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top: -100px;
+	-webkit-transition: top 0.3s;
+	transition: top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder {
+	height: 80px;
+	display: none;
+}
+
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	color: #ffffff;
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font: 16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a {
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration: none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover {
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float: none;
+	}
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+	body.fixed .header-fixed {
+		display: none;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	background-image: url("../images/bg.jpg");
+	background-size: cover;
+	background-position: top center;
+}
+
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 2em;
+	opacity: 1;
+	filter: none;
+	-moz-transition: opacity 1s ease, -moz-filter 1s ease;
+	-webkit-transition: opacity 1s ease, -webkit-filter 1s ease;
+	-ms-transition: opacity 1s ease, -ms-filter 1s ease;
+	transition: opacity 1s ease, filter 1s ease;
+}
+
+#header {
+	text-align: center;
+	padding: 6em 0 4em 0;
+}
+
+.container-wrapper h1 {
+	color: rgba(255, 255, 255, 0.65);
+}
+
+.avatar {
+	text-align: center;
+	padding: 6em 0 4em 0;
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0 0 2em 0;
+	padding: 0.5em;
+	border: solid 1px rgba(255, 255, 255, 0.25);
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+.avatar img {
+	border-radius: 100%;
+	display: block;
+	width: 12em;
+	height: 12em;
+}
+
+@media screen and (max-width: 1280px) {
+	#header {
+		padding: 4em 0 2em 0;
+	}
+}
+
+
+/***** FOOTER CSS *****/
+
+#footer {
+	color: #ffffff;
+	text-align: center;
+	padding: 4em 0 4em 0;
+}
+
+#footer:before {
+	content: '';
+	border-top: solid 1px rgba(255, 255, 255, 0.25);
+	width: 50em;
+	display: block;
+	margin: 0 auto 3em auto;
+}
+
+@media screen and (max-width: 1280px) {
+	#footer {
+		padding: 2em 0 2em 0;
+	}
+}
+
+
+/* Thumbnails */
+
+.post-div {
+	border: 1px solid #f2dede;
+    /* margin: 4px; */
+    /* width: 38%; */
+    max-width: 24%;
+    /* height: 206px; */
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
