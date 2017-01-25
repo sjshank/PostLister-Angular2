@@ -9,10 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var post_service_1 = require("./post.service");
 var ListPostComponent = (function () {
-    function ListPostComponent(_postService) {
+    function ListPostComponent(_postService, _route, _router) {
         this._postService = _postService;
+        this._route = _route;
+        this._router = _router;
     }
     ListPostComponent.prototype.ngOnInit = function () {
         this.getList();
@@ -28,7 +31,9 @@ ListPostComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/modules/post/list.component.html'
     }),
-    __metadata("design:paramtypes", [post_service_1.PostService])
+    __metadata("design:paramtypes", [post_service_1.PostService,
+        router_1.ActivatedRoute,
+        router_1.Router])
 ], ListPostComponent);
 exports.ListPostComponent = ListPostComponent;
 //# sourceMappingURL=postlist.component.js.map

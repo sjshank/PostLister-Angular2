@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { IPost } from './post';
 import { PostService } from './post.service';
@@ -11,7 +12,9 @@ export class ListPostComponent implements OnInit {
     posts : IPost;
     public errorMessage : string;
 
-    constructor(private _postService: PostService){}
+    constructor(private _postService: PostService,
+                private _route: ActivatedRoute,
+                private _router: Router){}
 
     ngOnInit(): void {
         this.getList();

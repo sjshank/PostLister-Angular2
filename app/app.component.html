@@ -3,9 +3,9 @@
         <div class="header-limiter">
             <h1>{{pTitle}}</h1>
             <nav>
-                <a [routerLink]="['/home']" class="">Home</a>
-                <a [routerLink]="['/post/add']" class="">Add Post</a>
-                <a [routerLink]="['/posts']" class="">Posts</a>
+                <a [routerLinkActive]="['selected']" [routerLink]="['/home']" class="">Home</a>
+                <a [routerLinkActive]="['selected']" [routerLink]="['/post/add']" class="">Add Post</a>
+                <a [routerLinkActive]="['selected']" [routerLink]="['/posts']" class="">Posts</a>
             </nav>
         </div>
     </header>

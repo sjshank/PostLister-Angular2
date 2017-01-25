@@ -198,7 +198,7 @@ body {
 #footer:before {
 	content: '';
 	border-top: solid 1px rgba(255, 255, 255, 0.25);
-	width: 50em;
+	width: 10em;
 	display: block;
 	margin: 0 auto 3em auto;
 }
@@ -214,13 +214,14 @@ body {
 
 .post-div {
 	border: 1px solid #f2dede;
-    /* margin: 4px; */
-    /* width: 38%; */
-    max-width: 24%;
-    /* height: 206px; */
-    border-radius: 5px;
-    color: rgba(255, 255, 255, 0.65);
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+	/* margin: 4px; */
+	width: 25%;
+	/* max-width: 61%; */
+	height: 280px;
+	border-radius: 5px;
+	color: rgba(255, 255, 255, 0.65);
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	overflow: hidden;
 }
