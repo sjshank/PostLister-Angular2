@@ -12,6 +12,7 @@ import { IPost } from './post';
 @Injectable()
 export class PostService{
     private _postListUrl : string = "http://jsonplaceholder.typicode.com/posts/";
+    private _addPostUrl : string = "http://jsonplaceholder.typicode.com/posts/";
 
     constructor(private _http: Http){}
 
@@ -19,6 +20,12 @@ export class PostService{
         return this._http.get(this._postListUrl)
                     .map((response: Response) => <IPost[]> response.json())
                     .catch(this.handleError);                    
+    }
+
+    addPost(post: IPost) : Observable<any>{
+        return this._http.post(this._addPostUrl, post)
+                        .map((response: Response) => <any> response.json())
+                        .catch(this.handleError);
     }
 
      private handleError(error: Response) {

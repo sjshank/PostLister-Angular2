@@ -19,9 +19,15 @@ var PostService = (function () {
     function PostService(_http) {
         this._http = _http;
         this._postListUrl = "http://jsonplaceholder.typicode.com/posts/";
+        this._addPostUrl = "http://jsonplaceholder.typicode.com/posts/";
     }
     PostService.prototype.getList = function () {
         return this._http.get(this._postListUrl)
+            .map(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    PostService.prototype.addPost = function (post) {
+        return this._http.post(this._addPostUrl, post)
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };

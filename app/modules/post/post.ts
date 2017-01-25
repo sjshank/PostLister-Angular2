@@ -1,4 +1,4 @@
-/* Defines the User entity */
+/* Defines the Post entity */
 export interface IPost {
     userId: number;
     id: number;
