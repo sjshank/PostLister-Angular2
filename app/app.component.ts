@@ -10,7 +10,6 @@ export class AppComponent {
     public pTitle : string = 'Postacular - Angular 2';
     constructor(private _route: ActivatedRoute,
                 private _router: Router){
-            console.log(_route);
-            console.log(_router);
+            
     }
 }

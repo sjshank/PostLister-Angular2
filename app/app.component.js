@@ -15,8 +15,6 @@ var AppComponent = (function () {
         this._route = _route;
         this._router = _router;
         this.pTitle = 'Postacular - Angular 2';
-        console.log(_route);
-        console.log(_router);
     }
     return AppComponent;
 }());

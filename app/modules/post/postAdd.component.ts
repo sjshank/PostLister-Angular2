@@ -10,6 +10,9 @@ import { IPost } from './post';
 
 export class AddPostComponent {
     post: IPost;
+    success: string = '';
+    successMsg : string = 'Post has been added successfully !';
+    errorMessage: string = '';
     postForm: FormGroup;
 
     constructor(private _postService: PostService,
@@ -18,13 +21,18 @@ export class AddPostComponent {
             this.postForm = this._fb.group({
                 'name':['', Validators.required],
                 'userId': ['', Validators.required],
-                'title':['', [Validators.minLength(1), Validators.maxLength(20)]],
-                'body':['', [Validators.minLength(1), Validators.maxLength(360)]]
+                'title':['', [Validators.required, Validators.minLength(1), Validators.maxLength(20)]],
+                'body':['', [Validators.required, Validators.minLength(1), Validators.maxLength(360)]]
             })
     }
 
 
     addPost() {
-
+        if(this.postForm.dirty && this.postForm.valid){
+            this._postService.addPost(this.post)
+                            .subscribe(
+                            success => this.success = success,
+                            error => this.errorMessage = <string>error);
+        }
     }
 }
