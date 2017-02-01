@@ -16,7 +16,7 @@ var AddPostComponent = (function () {
         this._postService = _postService;
         this._fb = _fb;
         this.success = '';
-        this.successMsg = 'Post has been added successfully !';
+        this.successMsg = 'Post has been submitted successfully !';
         this.errorMessage = '';
         this.postForm = this._fb.group({
             'name': ['', forms_1.Validators.required],

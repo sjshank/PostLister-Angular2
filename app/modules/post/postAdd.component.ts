@@ -11,7 +11,7 @@ import { IPost } from './post';
 export class AddPostComponent {
     post: IPost;
     success: string = '';
-    successMsg : string = 'Post has been added successfully !';
+    successMsg : string = 'Post has been submitted successfully !';
     errorMessage: string = '';
     postForm: FormGroup;
 
