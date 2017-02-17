@@ -10,6 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
+var ng2_pagination_1 = require("ng2-pagination");
 var postAdd_component_1 = require("./postAdd.component");
 var postlist_component_1 = require("./postlist.component");
 var post_service_1 = require("./post.service");
@@ -25,6 +26,7 @@ PostModule = __decorate([
             http_1.HttpModule,
             forms_1.ReactiveFormsModule,
             forms_1.FormsModule,
+            ng2_pagination_1.Ng2PaginationModule,
             router_1.RouterModule.forChild([
                 { path: 'posts', component: postlist_component_1.ListPostComponent },
                 { path: 'post/add', component: postAdd_component_1.AddPostComponent }

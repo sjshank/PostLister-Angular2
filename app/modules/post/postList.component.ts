@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { IPost } from './post';
@@ -11,6 +11,7 @@ import { PostService } from './post.service';
 export class ListPostComponent implements OnInit {
     posts : IPost;
     public errorMessage : string;
+    page : number = 1;
 
     constructor(private _postService: PostService,
                 private _route: ActivatedRoute,
@@ -23,7 +24,10 @@ export class ListPostComponent implements OnInit {
     getList() {
         this._postService.getList()
                         .subscribe(
-                            posts => this.posts = posts,
+                            posts => {
+                                this.posts = posts;
+                                console.log(this.posts);
+                            }
                             error => this.errorMessage = <string>error);
     }
 }

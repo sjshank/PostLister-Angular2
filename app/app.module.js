@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var router_1 = require("@angular/router");
+var ng2_pagination_1 = require("ng2-pagination");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./modules/home/home.component");
 var post_module_1 = require("./modules/post/post.module");
@@ -27,7 +28,8 @@ AppModule = __decorate([
                 { path: '', redirectTo: 'home', pathMatch: 'full' },
                 { path: '**', redirectTo: 'home', pathMatch: 'full' }
             ]),
-            post_module_1.PostModule
+            post_module_1.PostModule,
+            ng2_pagination_1.Ng2PaginationModule
         ],
         declarations: [
             app_component_1.AppComponent,

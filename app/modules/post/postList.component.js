@@ -16,6 +16,7 @@ var ListPostComponent = (function () {
         this._postService = _postService;
         this._route = _route;
         this._router = _router;
+        this.page = 1;
     }
     ListPostComponent.prototype.ngOnInit = function () {
         this.getList();
@@ -23,7 +24,10 @@ var ListPostComponent = (function () {
     ListPostComponent.prototype.getList = function () {
         var _this = this;
         this._postService.getList()
-            .subscribe(function (posts) { return _this.posts = posts; }, function (error) { return _this.errorMessage = error; });
+            .subscribe(function (posts) {
+            _this.posts = posts;
+            console.log(_this.posts);
+        }, function (error) { return _this.errorMessage = error; });
     };
     return ListPostComponent;
 }());
